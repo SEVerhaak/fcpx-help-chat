@@ -1,10 +1,10 @@
-# Simon Says Neural Network Edition
+# FCPX Helper AI
 
-## How to run:
+## How to run locally:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/SEVerhaak/PRG8-Frontend-AI-Applicatie.git
+git clone https://github.com/SEVerhaak/fcpx-help-chat.git
 ```
 
 2. Install dependencies
@@ -12,15 +12,34 @@ git clone https://github.com/SEVerhaak/PRG8-Frontend-AI-Applicatie.git
 npm install
 ```
 
-3. Run local server
+3. Remove the .example from the `.env.example` file and add your own config data
+
+4. Run local server
 ```bash
-npm run dev
+npm run server
 ```
 
-## How to build
+5. If the server is running you can reach it at http://localhost:8000/ with a simple GET request 
+6. The GET request on the root URL should return the string `It's alive`
+7. You can run the `index.html` in the `Front-End` folder locally, and it will work with the localhost server
 
-1. Run build command
+## How to use in an online environment
+
+1. Upload the following files and directories to a node enabled server:
+   
+  - `routes` [folder]
+  - `vectorfiles` [folder]
+  - `.env`
+  - `package.json`
+  - `package-lock.json`
+  - `server.js`
+
+2. Install dependencies on the server
 ```bash
-npm run build
+npm install
 ```
-2. Move contents from `dist` folder to the `docs` folder, overwrite if necessary
+
+3. Run server
+```bash
+npm run server
+```
