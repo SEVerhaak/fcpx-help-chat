@@ -101,6 +101,7 @@ async function sendQuestion(messages, botBubble) {
         localStorage.setItem('messages', JSON.stringify(messages));
 
     } catch (err) {
+        submitBtn.disabled = true;
         botBubble.textContent = `Error: ${err.message}`;
     }
 
